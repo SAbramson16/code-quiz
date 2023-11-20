@@ -1,1 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Code Quiz</title>
+  </head>
 
+  <body>
+    <header>
+      <h4>View Highscores - IMPLEMENT FUNCTIONALITY</h4> 
+      <h4 id="time"> Time: </h4>
+      <h4 id="timer"></h4>
+    </header>
+    <section id ="viewDisplay">
+      <h1> Welcome to the Code Quiz</h1>
+      <p> This is a quiz to test your knowledge of javascript concepts. You will have <strong>one minute</strong> to complete the quiz, and if you answer incorrectly time will subtract from the timer. Click "Start Quiz" to begin. Good luck!</p>
+      <div><button id="startQuiz" class="btn">Start Quiz!</button></div>
+    </section>
+
+    <section>
+      <header><h3></h3>  </h3></header>
+      <h1></h1>
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </section>
+
+    <section> 
+      <h1>Game Over!</h1>
+      <h3>Your score: </h3>
+      <label class="text-right" for="initials">Enter your initials:</label>
+      <input type="text" id="initials" name="player-initials">
+      <div><button id="submit" class="btn">Submit</button></div>
+    </section>
+
+    <section>
+      <h1>Highscores</h1>
+      <ul></ul>
+      <div><button id="clearScore" class="btn">Clear Highscores</button></div>
+      <div><button id="start" class="btn">Play Again!</button></div>
+    </section>
+        
+
+    <script src="./assets/js/script.js"></script>  
+  </body>
+</html>

@@ -1,0 +1,9 @@
+header h4 {
+  display: inline-block;
+}
+
+#time, #timer {
+  display: flex;
+  float: right;
+  flex-direction: row-reverse;
+}
