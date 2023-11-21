@@ -1,9 +1,58 @@
-header h4 {
-  display: inline-block;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#time, #timer {
-  display: flex;
+body {
+  background-color:lightblue;
+  color: black;
+}
+
+.btn {
+  background-color: navy;
+  color: white;
+  border-radius: 10px;
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  font-size: 18px;
+}
+
+header h4 {
+  display: inline-block;
+  font-size: 100%;
+  padding: 15px;
+}
+
+h4 a:hover {
+  color:grey;
+}
+
+#timer, #time {
+  display: inline;
   float: right;
-  flex-direction: row-reverse;
+  justify-content: space-between;
+  font-size: 150%;
+}
+
+#viewDisplay h1{
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.answers {
+  text-align: center;
+}
+#questionSection {
+  display: none;
+}
+
+#gameOverSection {
+  display: none;
+}
+
+#highscoreSection {
+  display: none;
 }
