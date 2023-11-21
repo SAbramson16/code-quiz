@@ -3,17 +3,21 @@ let timerEl = document.getElementById('timer');
 let introSection = document.querySelector("#introSection");
 let questionSection = document.querySelector("#questionSection");
 let gameOverSection = document.querySelector("#gameOverSection");
-let highscoresSection = document.querySelector("#higscoresSection");
+let highscoreSection = document.querySelector("#highscoreSection");
 let submitBtn = document.querySelector("#submitBtn");
 let questionBtn = document.querySelector(".questionBtn");
+let scoreList = document.querySelector("#scoreList");
+let pickedChoice = document.getElementById('#pickedChoice');
 
-// let questionNumber = 0;
-// let answerNumber = 0;
-let isRight = false;
-let chosenAnswer = false;
+
 let timeLeft = 0;
 
-let correctAnswers = [];
+let highscoresList = [];
+
+let playerObj = {
+  initials: "",
+  score: 0
+}
 
 let quizContent = {
   questions: ["Commonly used data types DO NOT include: ", 
@@ -33,7 +37,7 @@ let quizContent = {
 }
 //Add event listener to the start quiz button
 startBtn.addEventListener("click", startQuiz);
-
+submitBtn.addEventListener("click", submitScore);
 
 answerBtn.addEventListener("click", checkAnswer);
 
@@ -59,11 +63,9 @@ function startTimer(){
 function startQuiz() {
   // console.log("start");
   startTimer();
-  introSection.setAttribute("style", "display: none;")
+  introSection.setAttribute("style", "display: none;");
   questionPresent();
-  questionSection.setAttribute("style", "display: block;")
-
-  
+  questionSection.setAttribute("style", "display: block;");
 }
 
 
@@ -81,24 +83,63 @@ function questionPresent() {
 }
 
 function gameOver() {
-  questionSection.setAttribute("style", "display: none;")
-  gameOverSection.setAttribute("style", "display: block;")
-
+  questionSection.setAttribute("style", "display: none;");
+  gameOverSection.setAttribute("style", "display: block;");
+  //stop/clear timer
   
-  submitBtn.addEventListener("click", showHighscores);
+}
+
+function submitScore() {
+  //set score in local storage
+  //get highscores list append to list, the playerObj
+  highscoresList.push(playerObj);
+  
+  let storedScores = JSON.parse(localStorage.getItem("playerObj"));
+  if (storedScores !== null) {
+    highscoresList=storedScores;
+  }
+  localStorage.setItem("highscoresList", JSON.stringify(playerObj));
+
+  showHighscores();
 }
 
 function showHighscores() {
-  let scores = localStorage.getItem("scores");
-  scoresList.textContent = scores;
+  gameOverSection.setAttribute("style", "display: none;");
+  highscoreSection.setAttribute("style", "display: block;");
+
+  
+
+  scoreList.innerHTML = "";
+
+  for (let i = 0; i < highscoresList.length; i++) {
+    let playerObj = highscoresList[i];
+
+    let li = document.createElement("li");
+    li.textContent = playerObj.initials + playerObj.score;
+    li.setAttribute("data-index", i);
+
+    scoreList.appendChild(li);
+    
+  }
+
+//get high scores list and populate
+
+
+  // let scores = localStorage.getItem("scores");
+  // scoresList.textContent = scores;
 }
 
 function checkAnswer(evt) {
   let currentChoiceIndex = evt.currentTarget.getAttribute("value");
+  pButtonId = "pickedChoice" + currentChoiceIndex;
+  let pButton = document.getElementById(pButtonId);
+
   console.log("This is the ID: " + currentChoiceIndex);
   if (quizContent.correctAnswers[quizContent.currentQuestionIndex] == currentChoiceIndex) {
-    isWin = true;
+    pickedChoice.textContent = "That's right!";
+    playerObj.score++;
   } else {
+    //textcontent wrong
     timeLeft-=5;
   }
   

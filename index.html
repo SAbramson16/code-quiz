@@ -15,17 +15,17 @@
     </header>
     <section id ="introSection">
       <h1> Welcome to the Code Quiz</h1>
-      <p> This is a quiz to test your knowledge of javascript concepts. You will have <strong>one minute</strong> to complete the quiz, and if you answer incorrectly time will subtract from the timer. Click "Start Quiz" to begin. Good luck!</p>
+      <p> This is a quiz to test your knowledge of JavaScript concepts. You will have <strong>one minute</strong> to complete the quiz, and if you answer incorrectly time will subtract from the timer. Click "Start Quiz" to begin. Good luck!</p>
       <div><button id="startQuiz" class="btn">Start Quiz!</button></div>
     </section>
 
     <section id ="questionSection">
       <h1 class="question"></h1>
       <ul class="choices">
-        <li><button value="0" id="answerBtn0" class="btn questionBtn"></button></li>
-        <li><button value="1" id="answerBtn1" class="btn questionBtn"></button></li>
-        <li><button value="2" id="answerBtn2" class="btn questionBtn"></button></li>
-        <li><button value="3" id="answerBtn3" class="btn questionBtn"></button></li>
+        <li><button value="0" id="answerBtn0" class="btn questionBtn"></button><p id="pickedChoice"></p></li>
+        <li><button value="1" id="answerBtn1" class="btn questionBtn"></button><p id="pickedChoice"></p></li>
+        <li><button value="2" id="answerBtn2" class="btn questionBtn"></button><p id="pickedChoice"></p></li>
+        <li><button value="3" id="answerBtn3" class="btn questionBtn"></button><p id="pickedChoice"></p></li>
       </ul>
     </section>
 
@@ -39,9 +39,9 @@
 
     <section id ="highscoreSection">
       <h1>Highscores</h1>
-      <ul></ul>
+      <ul id="scoreList"></ul>
       <div><button id="clearScore" class="btn">Clear Highscores</button></div>
-      <div><button id="start" class="btn">Play Again!</button></div>
+      <div><button id="startQuiz" class="btn">Play Again!</button></div>
     </section>
         
 
