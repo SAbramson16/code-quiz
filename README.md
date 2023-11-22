@@ -12,9 +12,9 @@ This project is a code quiz built for coding students studying JavaScript concep
 
 The user will answer 5 coding related questions in 60 seconds and gets points for correct answers, and time subtracted from the timer for incorrect answers. At the end of the quiz, or when the timer runs out, the user is able to enter their initials and save their highscore into a list.   
 
-The website can be launched by using GitHub pages, and follwing this URL:
+The website can be launched by using GitHub pages, and follwing this URL: https://sabramson16.github.io/code-quiz/
 
-![Alt text](./assets/images/password-generator-screenshot.png) 
+![Alt text](./assets/images/Screenshot%202023-11-21%20180956.png) 
 
 ## Credits
 

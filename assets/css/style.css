@@ -10,21 +10,15 @@ body {
   color: black;
 }
 
-.btn {
-  background-color: navy;
-  color: white;
-  border-radius: 10px;
-  width: 150px;
-  height: 40px;
-  text-align: center;
-  font-size: 15px;
-  margin: 5px;
-}
-
 header h4 {
   display: inline-block;
   font-size: 100%;
   padding: 15px;
+}
+
+#highscoresBtn {
+  color: black;
+  background: none;
 }
 
 h4 a:hover {
@@ -44,20 +38,26 @@ h1{
   font-size: 30px;
 }
 
-.answers {
+.btn {
+  background-color: navy;
+  color: white;
+  border-radius: 10px;
+  width: 150px;
+  height: 40px;
   text-align: center;
+  font-size: 15px;
+  margin: 5px;
 }
 
 #introSection {
   text-align: center;
   margin-top: 50px;
   font-size: 24px;
-  
 }
 
 #questionSection {
   display: none;
- text-align: center;
+  text-align: center;
   margin-top: 50px;
   background-color: cadetblue;
 }
@@ -71,4 +71,11 @@ h1{
 
 #highscoreSection {
   display: none;
+  text-align: center;
+}
+
+#highscoreSection ul {
+  list-style-type: none;
+  padding: 0;
+  background-color: cadetblue;
 }

@@ -9,7 +9,7 @@
 
   <body>
     <header>
-      <h4>View Highscores - IMPLEMENT FUNCTIONALITY</h4> 
+      <h4><button id="highscoresBtn" class="btn">View Highscores</h4> 
       <h4 id="timer"></h4>
       <h4 id="time">Time: </h4>
     </header>
@@ -22,10 +22,10 @@
     <section id ="questionSection">
       <h1 class="question"></h1>
       <ul class="choices">
-        <li><button value="0" id="answerBtn0" class="btn questionBtn"></button><p id="pickedChoice"></p></li>
-        <li><button value="1" id="answerBtn1" class="btn questionBtn"></button><p id="pickedChoice"></p></li>
-        <li><button value="2" id="answerBtn2" class="btn questionBtn"></button><p id="pickedChoice"></p></li>
-        <li><button value="3" id="answerBtn3" class="btn questionBtn"></button><p id="pickedChoice"></p></li>
+        <li><button value="0" id="answerBtn0" class="btn questionBtn"></button></li>
+        <li><button value="1" id="answerBtn1" class="btn questionBtn"></button></li>
+        <li><button value="2" id="answerBtn2" class="btn questionBtn"></button></li>
+        <li><button value="3" id="answerBtn3" class="btn questionBtn"></button></li>
       </ul>
     </section>
 
@@ -33,15 +33,15 @@
       <h1>Game Over!</h1>
       <h3>Your score: </h3>
       <label class="text-right" for="initials">Enter your initials:</label>
-      <input type="text" id="initials" name="player-initials">
+      <input type="text" id="initialsInput" name="player-initials">
       <div><button id="submitBtn" class="btn">Submit</button></div>
     </section>
 
     <section id ="highscoreSection">
       <h1>Highscores</h1>
       <ul id="scoreList"></ul>
-      <div><button id="clearScore" class="btn">Clear Highscores</button></div>
-      <div><button id="startQuiz" class="btn">Play Again!</button></div>
+      <div><button id="clearScoreBtn" class="btn">Clear Highscores</button></div>
+      <div><button id="playAgainBtn" class="btn">Play Again!</button></div>
     </section>
         
 
